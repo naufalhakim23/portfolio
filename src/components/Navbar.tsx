@@ -4,14 +4,13 @@ import {
   Flex,
   chakra,
   Button,
-  VisuallyHidden,
-  Text,
   VStack,
   HStack,
   IconButton,
   useDisclosure,
   useColorModeValue,
   CloseButton,
+  Image,
 } from "@chakra-ui/react";
 import { AiOutlineMenu } from "react-icons/ai";
 
@@ -37,12 +36,15 @@ export default function Navbar() {
               display="flex"
               alignItems="center"
             >
-              {/* <Logo /> */}
-              <Text>Chakra</Text>
-              <VisuallyHidden>Choc</VisuallyHidden>
+              <Image
+                src="./assets/images/Artboard 4.png"
+                alt="portofolio-logo"
+                width="50px"
+                mr={2}
+              />
             </chakra.a>
             <chakra.h1 fontSize="xl" fontWeight="medium" ml="2">
-              Choc
+              Naufal Al-Hakim
             </chakra.h1>
           </Flex>
           <HStack display="flex" alignItems="center" spacing={1}>
