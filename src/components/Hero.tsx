@@ -9,6 +9,7 @@ import {
   Center,
   Button,
 } from "@chakra-ui/react";
+import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 const Hero = () => {
   return (
     <Flex>
@@ -69,11 +70,34 @@ const Hero = () => {
             justifyContent="center"
             alignItems="center"
           >
-            <Button variant="ghost" colorScheme="blue">
-              Hello
+            <Button
+              variant="ghost"
+              colorScheme="blue"
+              _hover={{
+                bg: "blue.500",
+                color: "white",
+              }}
+              onClick={() => {
+                window.open(
+                  "https://www.linkedin.com/in/naufal-al-hakim/",
+                  "_blank"
+                );
+              }}
+            >
+              <AiFillLinkedin size={20} /> LinkedIn
             </Button>
-            <Button variant="ghost" colorScheme="blue">
-              Hello
+            <Button
+              variant="ghost"
+              colorScheme="blue"
+              _hover={{
+                bg: "black",
+                color: "white",
+              }}
+              onClick={() => {
+                window.open("https://www.github.com/naufalhakim23", "_blank");
+              }}
+            >
+              <AiFillGithub size={20} /> Github
             </Button>
           </SimpleGrid>
         </Flex>
