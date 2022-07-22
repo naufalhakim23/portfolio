@@ -13,6 +13,7 @@ import {
   Image,
 } from "@chakra-ui/react";
 import { AiOutlineMenu } from "react-icons/ai";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   const bg = useColorModeValue("white", "gray.800");
@@ -30,12 +31,7 @@ export default function Navbar() {
       >
         <Flex alignItems="center" justifyContent="space-between" mx="auto">
           <Flex>
-            <chakra.a
-              href="/"
-              title="Choc Home Page"
-              display="flex"
-              alignItems="center"
-            >
+            <chakra.a href="/" display="flex" alignItems="center">
               <Image
                 src="./assets/images/Artboard 4.png"
                 alt="portofolio-logo"
@@ -57,12 +53,19 @@ export default function Navbar() {
                 md: "inline-flex",
               }}
             >
-              <Button variant="link" colorScheme="black">
-                Home
-              </Button>
+              <Link to="/">
+                <Button variant="link" colorScheme="black">
+                  Home
+                </Button>
+              </Link>
               <Button variant="link" colorScheme="black">
                 Background
               </Button>
+              <Link to="/pokemon">
+                <Button variant="link" colorScheme="black">
+                  Pokemon List
+                </Button>
+              </Link>
             </HStack>
             <Button colorScheme="brand" size="sm">
               Get Started
