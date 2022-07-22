@@ -4,12 +4,16 @@ import Hero from "../components/Hero";
 import { ScaleFade } from "@chakra-ui/react";
 import BigCard from "../components/BigCard";
 import Picture from "../components/Picture";
+import TechUsed from "../components/TechUsed";
 
 const Home = () => {
   return (
     <div>
       <Navbar />
-      <Hero />
+      <ScaleFade initialScale={0.8} in={true}>
+        <Hero />
+      </ScaleFade>
+      <TechUsed />
       <ScaleFade initialScale={0.5} in={true}>
         <BigCard
           title={"IoT Garden with Deep Neural Network"}
