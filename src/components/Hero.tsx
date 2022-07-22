@@ -57,18 +57,19 @@ const Hero = () => {
             <span>NAUFAL AL-HAKIM</span>
           </Heading>
           <Text>
-            I am a Data Scientist, Machine Learning Engineer, and a Full Stack
-            Developer
+            I am a Data Scientist, Front-End Developer, Machine Learning
+            Engineer, and a Full Stack Developer
           </Text>
           <SimpleGrid
             columns={{
               base: 1,
-              md: 2,
+              md: 3,
             }}
             spacing={5}
             mt={4}
             justifyContent="center"
             alignItems="center"
+            mb={4}
           >
             <Button
               variant="ghost"
@@ -98,6 +99,22 @@ const Hero = () => {
               }}
             >
               <AiFillGithub size={20} /> Github
+            </Button>
+            <Button
+              variant="ghost"
+              colorScheme="blue"
+              _hover={{
+                bg: "blue.500",
+                color: "white",
+              }}
+              onClick={() => {
+                window.open(
+                  "https://drive.google.com/file/d/1GcoqXihyiEypcwEoJQi7jX_03MSS--yg/view?usp=sharing",
+                  "_blank"
+                );
+              }}
+            >
+              Download CV
             </Button>
           </SimpleGrid>
         </Flex>
