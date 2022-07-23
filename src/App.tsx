@@ -2,7 +2,7 @@ import React from "react";
 import { ChakraProvider, theme } from "@chakra-ui/react";
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
-import Pokemon from "./pages/Pokemon";
+import Pokemon from "./pages/Pokemon.jsx";
 function App() {
   return (
     <>
