@@ -19,6 +19,7 @@ const QuickViewPoke = ({ url }: { url: string }) => {
       console.log(error);
     }
   };
+  //eslint-disable-next-line
   useEffect(() => {
     fetchDescription(url);
   }, [url]);

@@ -13,11 +13,14 @@ const Pokemon = () => {
   const [urlDesc, setUrlDesc] = React.useState(null);
   const [isClicked, setIsClicked] = React.useState(false);
   const [numberIndex, setNumberIndex] = React.useState(0); //still not getting from click event
-  const fetchData = async () => {
+  //eslint-disable-next-line
+  const fetchData = async (
+    url = "https://pokeapi.co/api/v2/pokemon/1/"
+  ) => {
     try {
       const res = await axios({
         method: "GET",
-        url: "https://pokeapi.co/api/v2/pokemon/",
+        url: url,
         headers: {
           "Content-Type": "application/json",
         },
@@ -29,10 +32,12 @@ const Pokemon = () => {
       setIsError(true);
     }
   };
+  //eslint-disable-next-line
   useEffect(() => {
+    //eslint-disable-next-line
     fetchData();
-  }, [
-  ]);
+    //eslint-disable-next-line
+  }, []);
   return (
     <div>
       <NavbarPoke />
