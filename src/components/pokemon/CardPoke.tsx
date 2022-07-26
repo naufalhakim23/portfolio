@@ -1,5 +1,4 @@
 import React from "react";
-
 const CardPoke = ({
   name,
   id,
@@ -16,23 +15,21 @@ const CardPoke = ({
   };
   return (
     <div>
-      <div className="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 p-1">
-        <a href="#">
-          <img
-            className="rounded-t-lg object-center"
-            src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`}
-            alt=""
-          />
-        </a>
+      <div className="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 p-1 m-5 cursor-pointer">
+        <img
+          className="rounded-t-lg object-center object-cover w-60 h-50 shadow-md"
+          src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`}
+          alt=""
+        />
+
         <div className="p-5">
-          <a href="#">
-            <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-              {titleCase(name)}
-            </h5>
-          </a>
+          <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+            {titleCase(name)}
+          </h5>
+
           {/* <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-            {/* Here are the biggest enterprise technology acquisitions of 2021 so
-            far, in reverse chronological order. 
+            Here are the biggest enterprise technology acquisitions of 2021 so
+            far, in reverse chronological order.
           </p> */}
           <a
             href="#"
